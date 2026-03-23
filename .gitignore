@@ -1,4 +1,6 @@
 docker-compose.yml
 __pycache__
-ny_taxi_section_2/_pycache_
-__init__._py
+ny_taxi_section_2/__pycache__
+ny_taxi_section_2/helper/__pycache__
+ny_taxi_section_2/main_script/__pycache__
+__init__.py
