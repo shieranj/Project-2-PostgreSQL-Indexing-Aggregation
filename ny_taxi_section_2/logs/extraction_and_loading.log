@@ -1,0 +1,69 @@
+2025-11-07 23:40:58,485 - INFO - ================================================================================
+2025-11-07 23:40:58,485 - INFO - Extraction Starting...
+2025-11-07 23:40:58,485 - INFO - ================================================================================
+2025-11-07 23:41:01,108 - INFO - successfully parse html from https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page -  code 200
+2025-11-07 23:41:01,124 - INFO - Links match: https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2025-01.parquet 
+2025-11-07 23:41:01,126 - INFO - Found 1 matching parquet
+2025-11-07 23:41:01,133 - INFO - Saving yellow as dataframes...
+2025-11-07 23:41:15,017 - INFO - Saved yellow as dataframes!
+2025-11-07 23:41:15,421 - INFO - Filtered yellow taxi: 363,772 records for day_of_week=0
+2025-11-07 23:41:15,536 - INFO - Added metadata for yellow, run_id = 1
+2025-11-07 23:41:15,538 - INFO - Completed run_id=1 with 1 taxi type(s)
+2025-11-07 23:41:15,946 - INFO - Filtered yellow taxi: 453,993 records for day_of_week=1
+2025-11-07 23:41:15,982 - INFO - Added metadata for yellow, run_id = 2
+2025-11-07 23:41:15,984 - INFO - Completed run_id=2 with 1 taxi type(s)
+2025-11-07 23:41:16,374 - INFO - Filtered yellow taxi: 577,375 records for day_of_week=2
+2025-11-07 23:41:16,411 - INFO - Added metadata for yellow, run_id = 3
+2025-11-07 23:41:16,412 - INFO - Completed run_id=3 with 1 taxi type(s)
+2025-11-07 23:41:16,806 - INFO - Filtered yellow taxi: 614,230 records for day_of_week=3
+2025-11-07 23:41:16,839 - INFO - Added metadata for yellow, run_id = 4
+2025-11-07 23:41:16,840 - INFO - Completed run_id=4 with 1 taxi type(s)
+2025-11-07 23:41:17,250 - INFO - Filtered yellow taxi: 586,863 records for day_of_week=4
+2025-11-07 23:41:17,290 - INFO - Added metadata for yellow, run_id = 5
+2025-11-07 23:41:17,291 - INFO - Completed run_id=5 with 1 taxi type(s)
+2025-11-07 23:41:17,689 - INFO - Filtered yellow taxi: 476,399 records for day_of_week=5
+2025-11-07 23:41:17,726 - INFO - Added metadata for yellow, run_id = 6
+2025-11-07 23:41:17,728 - INFO - Completed run_id=6 with 1 taxi type(s)
+2025-11-07 23:41:18,227 - INFO - Filtered yellow taxi: 402,594 records for day_of_week=6
+2025-11-07 23:41:18,264 - INFO - Added metadata for yellow, run_id = 7
+2025-11-07 23:41:18,265 - INFO - Completed run_id=7 with 1 taxi type(s)
+2025-11-07 23:41:18,346 - INFO - Extraction Success!
+2025-11-07 23:41:18,348 - INFO - ================================================================================
+2025-11-07 23:41:18,355 - INFO - Loading to Postgres Starting...
+2025-11-07 23:41:18,356 - INFO - ================================================================================
+2025-11-07 23:41:18,358 - INFO - Loading per run_id...
+2025-11-07 23:41:18,605 - INFO - Connected to postgreSQL ny_taxi_capstone2_db
+2025-11-07 23:41:18,724 - INFO - table nyc_yellow_2025-01 does not exists - creating...
+2025-11-07 23:41:18,726 - INFO - Data type successfully mapped!
+2025-11-07 23:41:18,776 - INFO - Table nyc_yellow_2025-01 created!
+2025-11-07 23:41:18,811 - INFO - Created partition for run_id 1
+2025-11-07 23:41:18,827 - INFO - Created partition for run_id 2
+2025-11-07 23:41:18,853 - INFO - Created partition for run_id 3
+2025-11-07 23:41:18,875 - INFO - Created partition for run_id 4
+2025-11-07 23:41:18,894 - INFO - Created partition for run_id 5
+2025-11-07 23:41:18,912 - INFO - Created partition for run_id 6
+2025-11-07 23:41:18,934 - INFO - Created partition for run_id 7
+2025-11-07 23:41:18,934 - INFO - nyc_yellow_2025-01 table created successfully
+2025-11-07 23:41:19,003 - INFO - Index created nyc_yellow_2025-01_tpep_pickup_datetime_idx
+2025-11-07 23:41:19,066 - INFO - Index created nyc_yellow_2025-01_pulocationid_idx
+2025-11-07 23:41:19,127 - INFO - Index created nyc_yellow_2025-01_payment_type_idx
+2025-11-07 23:41:19,188 - INFO - Index created nyc_yellow_2025-01_run_id_idx
+2025-11-07 23:41:19,210 - INFO - All indexes commited to database
+2025-11-07 23:42:01,466 - INFO - Inserted 363772 rows into nyc_yellow_2025-01
+2025-11-07 23:42:01,727 - INFO - yellow: Run 1 Loaded!
+2025-11-07 23:42:56,029 - INFO - Inserted 453993 rows into nyc_yellow_2025-01
+2025-11-07 23:42:56,379 - INFO - yellow: Run 2 Loaded!
+2025-11-07 23:43:57,618 - INFO - Inserted 577375 rows into nyc_yellow_2025-01
+2025-11-07 23:43:57,877 - INFO - yellow: Run 3 Loaded!
+2025-11-07 23:44:51,596 - INFO - Inserted 614230 rows into nyc_yellow_2025-01
+2025-11-07 23:44:51,886 - INFO - yellow: Run 4 Loaded!
+2025-11-07 23:45:52,418 - INFO - Inserted 586863 rows into nyc_yellow_2025-01
+2025-11-07 23:45:52,740 - INFO - yellow: Run 5 Loaded!
+2025-11-07 23:46:45,821 - INFO - Inserted 476399 rows into nyc_yellow_2025-01
+2025-11-07 23:46:46,180 - INFO - yellow: Run 6 Loaded!
+2025-11-07 23:47:34,138 - INFO - Inserted 402594 rows into nyc_yellow_2025-01
+2025-11-07 23:47:34,405 - INFO - yellow: Run 7 Loaded!
+2025-11-07 23:47:34,406 - INFO - Connection to Postgres closed
+2025-11-07 23:47:34,406 - INFO - ================================================================================
+2025-11-07 23:47:34,406 - INFO - Loading to Postgres Completed...
+2025-11-07 23:47:34,406 - INFO - ================================================================================
