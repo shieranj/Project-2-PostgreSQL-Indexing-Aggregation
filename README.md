@@ -10,7 +10,6 @@ This projects demonstrates an end to end ETL data pipeline using pure python wit
 This project is a continuation of my 1st project, approximately after 1 week of focused learning for SQL. 
 
 ### Tech Stack
-
 - **Language**: Python 3.12.10  
 - **Data Processing**: pandas  
 - **Database**: PostgreSQL  
